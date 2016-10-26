@@ -1,4 +1,9 @@
-var d3 = require('d3');
-var three = require('three-js');
+var histo3D = require('./histogram3D');
 
-var lala = () => console.log("lala");
+function main() {
+  var histo = new histo3D('viz',);
+  histo.render();
+//  histo.load();
+}
+
+main();

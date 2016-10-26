@@ -14,8 +14,8 @@ build:
 	rm -rf $(BUILD_FOLDER)
 	mkdir $(BUILD_FOLDER)
 	cp $(SRC_FOLDER)/*.html $(BUILD_FOLDER)/
+	cp -r $(SRC_FOLDER)/img $(BUILD_FOLDER)/
 #	cp -r $(SRC_FOLDER)/data $(BUILD_FOLDER)/
-#	cp -r $(SRC_FOLDER)/img $(BUILD_FOLDER)/
 
 # Install dependencies
 deps:
