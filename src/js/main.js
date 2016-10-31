@@ -20,17 +20,17 @@ function main() {
   var getterExample1 = {x:"month", y:"value"}
 
   var dataHouse = [
-    {"nbPiece": 1, "m2": 40, "price": 20000},
-    {"nbPiece": 1, "m2": 60, "price": 27500},
-    {"nbPiece": 1, "m2": 20, "price": 10000},
-    {"nbPiece": 2, "m2": 45, "price": 30000},
-    {"nbPiece": 2, "m2": 35, "price": 20000},
-    {"nbPiece": 3, "m2": 50, "price": 35000},
+    {"nbPiece": "1", "m2": "40", "price": 20000},
+    {"nbPiece": "1", "m2": "60", "price": 27500},
+    {"nbPiece": "1", "m2": "20", "price": 10000},
+    {"nbPiece": "2", "m2": "45", "price": 30000},
+    {"nbPiece": "2", "m2": "35", "price": 20000},
+    {"nbPiece": "3", "m2": "50", "price": 35000},
   ];
   var getterHouse = {x:"nbPiece", y:"price", z:"m2"};
 
-//  histo.load(dataHouse, getterHouse);
-  histo.load(dataExample1, getterExample1);
+  histo.load(dataHouse, getterHouse);
+//  histo.load(dataExample1, getterExample1);
   histo.render();
 }
 
