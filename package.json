@@ -14,11 +14,12 @@
     "three-trackballcontrols": "0.0.5"
   },
   "devDependencies": {
-    "stats-js": "^1.0.0-alpha1",
     "babel-cli": "^6.16.0",
     "babel-preset-es2015": "^6.16.0",
     "babelify": "^7.3.0",
     "browserify": "^13.1.0",
+    "stats-js": "^1.0.0-alpha1",
+    "stylus": "^0.54.5",
     "watchify": "^3.7.0"
   }
 }

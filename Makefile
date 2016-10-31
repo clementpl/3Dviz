@@ -13,6 +13,7 @@ all: build compile
 build:
 	rm -rf $(BUILD_FOLDER)
 	mkdir $(BUILD_FOLDER)
+	mkdir $(BUILD_FOLDER)/css/
 	cp $(SRC_FOLDER)/*.html $(BUILD_FOLDER)/
 	cp -r $(SRC_FOLDER)/img $(BUILD_FOLDER)/
 #	cp -r $(SRC_FOLDER)/data $(BUILD_FOLDER)/
@@ -29,9 +30,11 @@ deps:
 # Compile JS
 compile:
 	$(NM_FOLDER)/browserify/bin/cmd.js $(SRC_FOLDER)/js/main.js -t [ babelify --presets [ es2015 ] ] --debug --s M > $(BUILD_FOLDER)/3Dviz.js
+	$(NM_FOLDER)/stylus/bin/stylus $(SRC_FOLDER)/css/main.styl --out $(BUILD_FOLDER)/css/
 
-# Watch
+# Watch for JS and CSS change
 watch:
+	$(NM_FOLDER)/stylus/bin/stylus --watch $(SRC_FOLDER)/css/main.styl --out $(BUILD_FOLDER)/css/ &
 	$(NM_FOLDER)/watchify/bin/cmd.js $(SRC_FOLDER)/js/main.js -t [ babelify --presets [ es2015 ] ] --debug --s M -o $(BUILD_FOLDER)/3Dviz.js
 
 # Test
